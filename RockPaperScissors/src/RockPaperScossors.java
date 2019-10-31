@@ -5,7 +5,7 @@ public class RockPaperScossors {
 
 
         String RandomChoice = "";
-        int randomNumber = (int)(Math.random()*3+1);
+
         int loss = 0;
         int won = 0;
 
@@ -15,20 +15,25 @@ public class RockPaperScossors {
         System.out.println("Rock beats scissors, paper beats rock and scissors beats paper. (Make sure to type in lower case)");
         System.out.println("Choose wisely, your opponent is Monkey!");
         System.out.println(" ");
-        if (randomNumber == 1){
-            RandomChoice = "Scissors";
-        }
-        else if (randomNumber == 2){
-            RandomChoice = "Paper";
-        }
-        else if (randomNumber == 3){
-            RandomChoice = "Rock";
-        }
+
         System.out.println("To start the game press 1");
 
-        String Choice = scan.next();
+        String Choice;
         int play = scan.nextInt();
         while(play == 1 ){
+
+            int randomNumber = (int)(Math.random()*3+1);
+
+            if (randomNumber == 1){
+                RandomChoice = "Scissors";
+            }
+            else if (randomNumber == 2){
+                RandomChoice = "Paper";
+            }
+            else if (randomNumber == 3){
+                RandomChoice = "Rock";
+            }
+
 
 
 
